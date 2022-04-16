@@ -39,7 +39,7 @@
     (insert-file-contents patch)
     (diff-mode)
     (font-lock-mode)
-    (when (re-search-forward "---" nil)
+    (when (re-search-forward "\n\n" nil)
       (buffer-substring
        (point-at-bol)
        (point-max)))))
